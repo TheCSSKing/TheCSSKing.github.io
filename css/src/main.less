@@ -1,0 +1,472 @@
+@background-color: #111;
+
+html {
+  /*http://lea.verou.me/css3patterns/#stars*/
+  background:
+  linear-gradient(324deg, #111 4%,   transparent 4%) -70px 43px,
+  linear-gradient( 36deg, #111 4%,   transparent 4%) 30px 43px,
+  linear-gradient( 72deg, #1a1a1a 8.5%, transparent 8.5%) 30px 43px,
+  linear-gradient(288deg, #1a1a1a 8.5%, transparent 8.5%) -70px 43px,
+  linear-gradient(216deg, #1a1a1a 7.5%, transparent 7.5%) -70px 23px,
+  linear-gradient(144deg, #1a1a1a 7.5%, transparent 7.5%) 30px 23px,
+
+  linear-gradient(324deg, #111 4%,   transparent 4%) -20px 93px,
+  linear-gradient( 36deg, #111 4%,   transparent 4%) 80px 93px,
+  linear-gradient( 72deg, #1a1a1a 8.5%, transparent 8.5%) 80px 93px,
+  linear-gradient(288deg, #1a1a1a 8.5%, transparent 8.5%) -20px 93px,
+  linear-gradient(216deg, #1a1a1a 7.5%, transparent 7.5%) -20px 73px,
+  linear-gradient(144deg, #1a1a1a 7.5%, transparent 7.5%) 80px 73px;
+  background-color: #111;
+  background-size: 100px 100px;
+ 
+  text-align: center;
+  color:white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 0px 15%;
+}
+
+section {
+  margin: 45px 0px;
+}
+
+@header-shadow-color: white;
+
+/* Thanks to https://codepen.io/areimel/pen/BKazmQ for cool text effect */
+section:nth-child(1) {
+  font-size: 90px;
+  color: gold;
+  text-transform: uppercase;
+  margin: 25px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  text-shadow: 1px 1px 0 @header-shadow-color , 2px 2px 0 @header-shadow-color , 3px 3px 0 @header-shadow-color , 4px 4px 0 @header-shadow-color , 5px 5px 0 @header-shadow-color , 6px 6px 0 @header-shadow-color , 7px 7px 0 @header-shadow-color , 8px 8px 0 @header-shadow-color , 9px 9px 0 @header-shadow-color , 10px 10px 0 @header-shadow-color , 11px 11px 0 @header-shadow-color , 12px 12px 0 @header-shadow-color , 13px 13px 0 @header-shadow-color , 14px 14px 0 @header-shadow-color , 15px 15px 0 @header-shadow-color , 16px 16px 0 @header-shadow-color , 17px 17px 0 @header-shadow-color , 18px 18px 0 @header-shadow-color , 19px 19px 0 @header-shadow-color , 20px 20px 0 @header-shadow-color ;
+  &:before {
+    content : "I AM THE CSS KING"
+  }
+}
+
+
+section:nth-child(4){
+  margin: 75px 0px;
+}
+
+.witness-btn {
+  background-color: #fff;
+  padding: 1em 2em;
+  border-radius: 4px;
+  color: black;
+  text-decoration: none;
+  background-color: gold;
+  animation: Gradient 1s ease infinite;
+
+  &:hover {
+    box-shadow: 0px 0px 0px 500px gold;
+    transition: box-shadow 7s linear;
+  }
+}
+
+.modal-window {
+  position: absolute;
+  border: 4px solid gold;
+  background-color: white;
+  border-radius: 4px;
+  z-index: 999;
+  top: 35%;
+  left: 0;
+  right: 0;
+  width: 600px;
+  height: 300px;
+  margin: 0px auto;
+  transition: all .5s;
+  opacity: 0;
+  pointer-events: none;
+  div {
+      margin: 25px 0px;
+  }
+}
+
+.modal-window:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-close-btn {
+  background-color: #333;
+  padding: .5em 1.5em;
+  border-radius: 4px;
+  text-decoration: none;
+  color: gold
+}
+
+.modal-window > div {
+  text-align: center;
+  color: black;
+}
+
+
+.power {
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 0px 10px;
+  font-size: 32px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  color: yellow;
+  animation-name: power-pulse;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.pure {
+  margin-left: 8px;
+  display: inline-block;
+  font-family: "Arial Black", Gadget, sans-serif;
+  text-shadow: 0px 0px 18px #EFEFBC;
+}
+
+.evil {
+  display: inline-block;
+  text-decoration: line-through;
+  text-shadow: 0px 0px 20px #000;
+  color: red;
+  &:hover {
+    animation: spin .8s linear infinite;
+  }
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.square {
+  width: 125px;
+  height: 125px;
+  background-color: white;
+  margin: 0px 50%;
+  color: #333;
+  animation: turn 6s ease-in-out infinite;
+  transform-origin: 0% 50%;
+  
+  .title {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg)
+  }
+}
+
+.frustration-button {
+   width: 65%;
+   margin: 0px auto;
+
+  .btn {
+    padding: 1em 2em;
+    background-color: red;
+    border-radius: 2px;
+    margin-bottom: 25px;
+    color: white;
+    text-shadow: 1px 1px 2px #333;
+  }
+  
+  .btn1 {
+    &:hover {
+      opacity: 0;
+    }
+    &:hover + .btn2 {
+      opacity: 1;
+    }
+  }
+  .btn2 {
+    opacity: 0;
+  }
+}
+
+.decree-announcement {
+  font-weight: bold;
+  color:gold;
+  font-size: 50px;
+  text-shadow: 0px 2px 15px white;
+}
+
+.decree {
+    margin: 0px auto;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    text-align: left;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: none;
+    background-color: #f8f5de;
+    background-image: linear-gradient(to right, rgba(255,210,0,0.4), rgba(200, 160, 0, 0.1) 11%, rgba(0,0,0,0) 35%, rgba(200, 160, 0, 0.1) 65%);
+    box-shadow: inset 0 0 75px rgba(255,210,0,0.3), inset 0 0 20px rgba(255,210,0,0.4), inset 0 0 30px rgba(220,120,0,0.8);
+    color: rgba(0,0,0,0.5);
+    width: 35%;
+    line-height: 1.8;
+    padding: 5em 8em 8em 5em;
+}
+
+.caps {
+  color: rgba(0,0,0,0.7);
+  float:left;
+  font-size: 7em;
+  line-height: 60px;
+  padding-right: 12px;
+  position:relative;
+  top:8px;
+}
+
+.kiloblights {
+  font-family: "Arial Black", Gadget, sans-serif;
+  background: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(73,88,17,1) 25%, rgba(141,149,15,1) 47%, rgba(33,54,18,1) 71%, rgba(69,136,12,1) 100%);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(73,88,17,1) 25%, rgba(141,149,15,1) 47%, rgba(33,54,18,1) 71%, rgba(69,136,12,1) 100%);
+  text-shadow: 0px 0px 5px 10px white;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin: 25px auto;
+  font-size: 75px;
+  font-weight: bold;
+  text-align: center;
+  /*animation: kilo 10s infinite linear;*/
+}
+
+
+.holy {
+  text-shadow: 0px 0px 10px gold, 0px 0px 20px gold;
+}
+
+.red {
+  color: red;
+}
+
+.request-num {
+  font-size: 100px;
+}
+
+.hide-num {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 110px;
+  animation: shownum 16s infinite linear;
+}
+
+
+.repent {
+  margin: 50px 0;
+}
+
+.repent button {
+  text-align: center;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  color: white;
+  text-transform: uppercase;
+
+  @good-color: gold;
+  @evil-color: red;
+
+  .repent-btn {
+    background-color: @good-color;
+    padding: 1em 2em;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 25%;
+    margin: 25px auto;
+    text-shadow: 1px 1px 2px #333;
+    &:before {
+      content: "Repent";
+    }
+  }
+
+  .text-change {
+    color: @good-color;
+    display: inline-block;
+  }
+
+  .benevolent:before {
+    content: "Benevolent";
+  }
+
+  .merciful:before {
+    content: "Merciful";
+  }
+
+  .welcomed:before {
+    content: "Welcomed with open arms";
+  }
+
+
+  &:focus {
+
+    .text-change {
+      color: @evil-color;
+    }
+
+    .merciful:before {
+      content: "Angry";
+    }
+  
+    .benevolent:before {
+      content: "vengeful";
+    }
+
+    .welcomed:before {
+      content: "punished for my amusement";
+    }
+
+    .repent-btn {
+      &:before {
+        content: "OFF TO THE DUNGEON";
+      }
+      background-color: red;
+    }
+
+    .action {
+      opacity: 0;
+    }
+
+    outline: none;
+  }
+}
+
+
+.price {
+  margin: 50px auto;
+  overflow: hidden;
+  height: 45px;
+  padding: 10px;
+
+  > div > div {
+    color: white;
+    padding: 8px 12px;
+    margin-bottom: 45px;
+    background-color: red;
+    display: inline-block;
+  }
+
+  > div:first-child {
+    animation: showprice 12s infinite linear;
+  }
+}
+
+.footer {
+  padding-top: 25px;
+  text-transform: none;
+  color: #777;
+  font-size: 14px;
+  a {
+    color: #777;
+  }
+}
+
+@keyframes showprice {
+  0% {margin-top: 0px;}
+  5% { margin-top: -90px; }
+  15% { margin-top: -90px;}
+  20% { margin-top: -180px;}
+  30% {margin-top: -180px;}
+  35% {margin-top: -270px;}
+  45% {margin-top: -270px;}
+  50% {margin-top: -360px;}
+  60% {margin-top: -360px;}
+  65% {margin-top: -450px;}
+  75% {margin-top: -450px;}
+  80% {margin-top: -540px;}
+  90% {margin-top: -540px;}
+  90.01% {margin-top: 0px;}
+}
+
+@keyframes shownum {
+  0% {
+    width: 50px;
+  }
+
+  25% {
+    width: 500px;
+  }
+
+  50% {
+    width: 1000px;
+  }
+
+  100%{
+    width: 1000px;
+  }
+}
+
+
+@keyframes kilo {
+  0% {
+    transform: skew(0);
+  }
+
+  20% {
+    transform: skew(.3rad) translateX(-15px) rotate(1deg);
+  }
+
+  80% {
+    transform: skew(-.3rad) translateX(15px) rotate(-1deg);
+  }
+
+  100% {
+    transform: skew(0);
+  }
+}
+  
+  
+
+@keyframes turn {
+  0% {
+    transform: rotateY(0);
+    background-color: white;
+  }
+  
+  50% {
+    transform: rotateY(-180deg);
+    background-color: gold;
+  }
+  
+  100% {
+    transform: rotateY(-360deg);
+    background-color: white;
+  }
+}
+
+@keyframes Gradient {
+	0% {
+		background-color: gold;
+	}
+	50% {
+		background-color: white;
+	}
+	100% {
+		background-color: gold;
+	}
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes power-pulse {
+  0% {
+    transform: scale(1);
+  }
+  
+  50% {
+    transform: scale(1.1);
+  }
+  
+  100% {
+    transform: scale(1);
+  }
+}
+
